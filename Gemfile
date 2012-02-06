@@ -1,17 +1,27 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
+gem 'bcrypt-ruby', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+group :development do
+ gem 'annotate', '~> 2.4.1.beta' 
+end
+
 group :development, :test do
 gem 'sqlite3'
 gem 'rspec-rails'
+gem 'guard-rspec'
 end
 
 group :test do
+  gem 'rspec-rails'
   gem 'capybara', '1.1.2'
+  gem 'rb-fsevent'
+  gem 'growl'
+  gem 'factory_girl_rails', '1.4.0'
 end
 
 group :production do
